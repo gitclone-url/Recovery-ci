@@ -9,7 +9,7 @@ OrangeFox-CI:
   timeout: 5 hours
   script:
     - source config.sh
-    - curl -sL https://raw.githubusercontent.com/Arafattex/OrangeFox-CI/los/scripts/checks.sh | bash
-    - curl -sL https://raw.githubusercontent.com/Arafattex/OrangeFox-CI/los/scripts/sync.sh | bash
-    - curl -sL https://raw.githubusercontent.com/Arafattex/OrangeFox-CI/los/scripts/build.sh | bash
-    - curl -sL https://raw.githubusercontent.com/Arafattex/OrangeFox-CI/los/scripts/upload.sh | bash
+    - curl -sL https://raw.githubusercontent.com/Arafattex/OrangeFox-CI/losn/scripts/checks.sh | bash
+    - curl -sL https://raw.githubusercontent.com/Arafattex/OrangeFox-CI/losn/scripts/sync.sh | bash
+    - curl -sL https://raw.githubusercontent.com/Arafattex/OrangeFox-CI/losn/scripts/build.sh | bash
+    - curl -sL https://raw.githubusercontent.com/Arafattex/OrangeFox-CI/losn/scripts/upload.sh | bash
