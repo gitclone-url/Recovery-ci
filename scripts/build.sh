@@ -56,7 +56,7 @@ lunch lineage_lava-eng
     
 # Build the Code
 
-mka bacon -j25
+mka bacon -j200
 
 
 
