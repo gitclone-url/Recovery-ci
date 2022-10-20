@@ -18,7 +18,7 @@ telegram_message() {
 
 # Initialize local repository
 repo init -u https://github.com/LineageOS/android.git -b lineage-20.0
-curl -o .repo/local_manifests/local_manifests.xml https://raw.githubusercontent.com/Arafattex/local_manifest/Lancelot_los/local_manifest.xml --create-dirs
+curl -o .repo/local_manifests/local_manifests.xml https://raw.githubusercontent.com/Arafattex/local_manifest/Lancelot_pixel/local_manifest.xml --create-dirs
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 # Exit
