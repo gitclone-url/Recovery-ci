@@ -13,6 +13,8 @@ env:
     CIRRUS_SHELL: bash
 freebsd_instance:
   image_family: freebsd-13-0
+  cpu: 9
+  memory: 32G
 
 task:
   name: "Recovery Build"
