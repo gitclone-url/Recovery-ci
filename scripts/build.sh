@@ -43,16 +43,11 @@ TG_TEXT=$(< tg.html)
 telegram_message "${TG_TEXT}"
 echo " "
 
-# Prepare the Build Environment
 source build/envsetup.sh
-
-
-# export some Basic Vars
 export ALLOW_MISSING_DEPENDENCIES=true
-
-
-# lunch the target
-lunch lineage_lava-eng
+lunch bootleg_lava-userdebug
+export TZ=Asia/Dhaka #put before last build command
+mka bacon
     
 # Build the Code
 
