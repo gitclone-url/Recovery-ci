@@ -17,8 +17,8 @@ telegram_message() {
 # Clone the Sync Repo
 
 # Initialize local repository
-repo init -u https://github.com/LineageOS/android.git -b lineage-20.0
-curl -o .repo/local_manifests/local_manifests.xml https://raw.githubusercontent.com/Arafattex/local_manifest/Lancelot_pixel/local_manifest.xml --create-dirs
+repo init --depth=1 --no-repo-verify -u https://github.com/Bootleggers-BrokenLab/manifest.git -b tirimbino -g default,-mips,-darwin,-notdefault
+git clone https://github.com/Arafattex/local_manifest.git --depth 1 -b Lancelot_bootleg2 .repo/local_manifests
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 # Exit
