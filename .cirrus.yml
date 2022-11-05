@@ -11,14 +11,14 @@ env:
 
     # Cirrus Specific Vars (Do *NOT* Change)
     CIRRUS_SHELL: bash
-freebsd_instance:
-  image_family: freebsd-13-0
-  cpu: 9
-  memory: 32G
 
 task:
+  timeout_in: 180m
   name: "Recovery Build"
-  timeout_in: 125m
+  container:
+      image: ghcr.io/sushrut1101/docker:arch
+      cpu: 8
+      memory: 32G
  
   Checks_script:
       - curl -sL https://raw.githubusercontent.com/Arafattex/OrangeFox-CI/losn/scripts/checks.sh | bash
