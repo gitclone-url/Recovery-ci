@@ -13,7 +13,7 @@ export OEM="micromax"
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
 export TARGET="bootimage"
 
-export OUTPUT="Twrp*.zip"
+export OUTPUT="PBRP*.zip"
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
 export USE_CCACHE=1
