@@ -6,14 +6,6 @@ source $CONFIG
 # Change to the Home Directory
 cd ~
 
-# A Function to Send Posts to Telegram
-telegram_message() {
-	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
-	-d chat_id="${TG_CHAT_ID}" \
-	-d parse_mode="HTML" \
-	-d text="$1"
-}
-
 # Clone the Sync Repo
 repo init --depth=1 -u $TWRP_SYNC -b $TWRP_BRANCH
 repo sync
