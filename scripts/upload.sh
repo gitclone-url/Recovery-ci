@@ -3,14 +3,6 @@
 # Source Vars
 source $CONFIG
 
-# A Function to Send Posts to Telegram
-telegram_message() {
-	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
-	-d chat_id="${TG_CHAT_ID}" \
-	-d parse_mode="HTML" \
-	-d text="$1"
-}
-
 # Change to the Source Directory
 cd ~
 
@@ -51,25 +43,6 @@ echo "=============================================="
 
 DATE_L=$(date +%d\ %B\ %Y)
 DATE_S=$(date +"%T")
-
-# Send the Message on Telegram
-echo -e \
-"
-🦊 OrangeFox Recovery CI
-✅ Build Completed Successfully!
-📱 Device: "${DEVICE}"
-🖥 Build System: "${TWRP_BRANCH}"
-⬇️ Download Link: <a href=\"${DL_LINK}\">Here</a>
-⬇️ Download Link: <a href=\"${DL_LINK2}\">Here</a>
-📅 Date: "$(date +%d\ %B\ %Y)"
-⏱ Time: "$(date +%T)"
-" > tg.html
-
-TG_TEXT=$(< tg.html)
-
-telegram_message "$TG_TEXT"
-
-echo " "
 
 # Exit
 exit 0
